@@ -12,7 +12,9 @@ Czy to tyle? Tak!
 ### Jak tego użyć?
 Znajdując się w folderze otwórz cmd i wpisz `node .` aby uruchomić program.
 Potem zapyta Cię on o ID filmu. Jeśli zapytasz co to jest, już odpowiadam:
+
 ![](https://i.imgur.com/KNsblf5.png)
+
 Jest to ta część linku którą widzisz na zdjęciu wyżej, i to właśnie ją musisz podać! I to tyle, jeśli cała konfiguracja przeszła prawidłowo, program powinien zwrócić Ci link ze zdjęciem.
 
 #### Używane biblioteki npm:
