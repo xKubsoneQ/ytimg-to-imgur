@@ -2,7 +2,7 @@
 Jest to bardzo proste narzędzie służące do automatycznego wrzucania miniaturek z YouTube na hosting zdjęć Imgur!
 
 ### Jak to skonfigurować?
-To proste! Pierwsze czego potrzebujesz to **Node.JS** oraz **npm**. Po pobraniu kodu, wpisujesz w konsoli `npm i` - zainstaluje Ci to wszystkie moduły używane przez program (ich listę znajdziesz niżej). Kolejnym krokiem jest [stworzenie swojej aplikacji na Imgurze](https://api.imgur.com/oauth2/addclient) - da Ci to `CLIENT_ID` i `CLIENT_SECRET`. Dalej stwórz plik `.env` w którym podasz `CLIENT_ID` i `CLIENT_SECRET` w podanym formacie:
+To proste! Po pierwsze, potrzebujesz **Node.JS** oraz **npm**. Po pobraniu kodu, wpisujesz w konsoli `npm i` - zainstaluje Ci to wszystkie moduły używane przez program (ich listę znajdziesz niżej). Kolejnym krokiem jest [stworzenie swojej aplikacji na Imgurze](https://api.imgur.com/oauth2/addclient) - da Ci to `CLIENT_ID` i `CLIENT_SECRET`. Dalej stwórz plik `.env` w którym podasz `CLIENT_ID` i `CLIENT_SECRET` w podanym formacie:
 ```
 CLIENT_ID = <twoje_id>
 CLIENT_SECRET = <twoj_token>
