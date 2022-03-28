@@ -1,0 +1,16 @@
+{
+  "name": "ytimg-to-imgur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "imgur": "^2.1.4",
+    "tslib": "^2.3.1"
+  }
+}
