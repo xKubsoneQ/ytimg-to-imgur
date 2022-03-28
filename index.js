@@ -1,5 +1,5 @@
 const { ImgurClient } = require('imgur');
-const uc = require("./userconfig.js");
+const uc = require("./imgur_config.js");
 const c = require("./conf.js");
 const client = new ImgurClient({ clientId: uc.client_id });
 const readline = require('readline').createInterface({
@@ -25,5 +25,11 @@ async function main(id) {
         title: `uploaded via ytimg-to-imgur v${c.version}`,
     });
     if(response.success == false) return console.log("Wystąpił błąd!");
-    console.log(response.data.link);
+    console.log("Sukces: " + response.data.link);
+    if(c.autoexit == true) {
+        setTimeout(() => {
+            console.log("Automatyczne wyłączenie za " + c.autoexit_time + " sekund. (Funkcję możesz wyłączyć w conf.js)");
+            process.exit();
+        }, c.autoexit_time * 1000);
+    } else return;
 }
