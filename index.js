@@ -8,28 +8,33 @@ const readline = require('readline').createInterface({
 });
 
 console.log(`ytimg-to-imgur (v${c.version})`);
-readline.question("Podaj link do filmu: ", link => {
+readline.question("Podaj link do filmu: ", async link => {
     if(link.includes("youtube.com/watch?v=")) {
-        main(link.split("youtube.com/watch?v=")[1]);
+        const id = link.split("youtube.com/watch?v=")[1];
+        const img = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
         readline.close();
+
+        upload(img).then(res => {
+            console.log("Sukces: " + res.data.link);
+            
+            if(c.autoexit.enabled == true) {
+                console.log("Automatyczne wyłączenie za " + c.autoexit.time + " sekund. (Funkcję możesz wyłączyć w conf.js)");
+                setTimeout(() => {
+                    process.exit();
+                }, c.autoexit.time * 1000);
+            } else return;
+        });
     } else {
         console.log("Niepoprawny link!");
         readline.close();
     }
 });
 
-async function main(id) {
-    const link = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
+async function upload(img) {
     const response = await client.upload({
-        image: link,
+        image: img,
         title: `uploaded via ytimg-to-imgur v${c.version}`,
     });
     if(response.success == false) return console.log("Wystąpił błąd!");
-    console.log("Sukces: " + response.data.link);
-    if(c.autoexit == true) {
-        setTimeout(() => {
-            console.log("Automatyczne wyłączenie za " + c.autoexit_time + " sekund. (Funkcję możesz wyłączyć w conf.js)");
-            process.exit();
-        }, c.autoexit_time * 1000);
-    } else return;
+    return response;
 }

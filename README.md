@@ -14,6 +14,14 @@ Znajdując się w folderze otwórz cmd i wpisz `node .` aby uruchomić program.
 Program zapyta Cię o link do filmu, musisz go podać.
 I to tyle, jeśli cała konfiguracja przeszła prawidłowo, program powinien zwrócić Ci link ze zdjęciem.
 
+### Własna konfiguracja (niewymagana)
+Pozostałe opcje, które oferuje program możesz zmienić w pliku `conf.js`.
+Poniżej przedstawię wszystkie opcje, które tam znajdziesz.
+- `autoexit` - automatyczne wyłączanie programu po zakończeniu pracy.
+W tym:
+`enabled` - czy funkcja ma być włączona.
+`autoexit_time` - czas (w sekundach) po jakim czasie program ma zostać wyłączony.
+
 #### Używane biblioteki npm:
 - `imgur`
 - `tslib` (bez tego `imgur` nie działał)
