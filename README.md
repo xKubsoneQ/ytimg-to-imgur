@@ -20,7 +20,7 @@ Poniżej przedstawię wszystkie opcje, które tam znajdziesz.
 - `autoexit` - automatyczne wyłączanie programu po zakończeniu pracy.
 W tym:
 `enabled` - czy funkcja ma być włączona.
-`autoexit_time` - czas (w sekundach) po jakim czasie program ma zostać wyłączony.
+`time` - czas (w sekundach) po jakim czasie program ma zostać wyłączony.
 
 #### Używane biblioteki npm:
 - `imgur`
